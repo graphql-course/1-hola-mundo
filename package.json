@@ -7,7 +7,8 @@
     "start": "node build/server.js",
     "build": "tsc -p . && ncp src/schema build/schema",
     "start:dev": "npm run build:dev",
-    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql"
+    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql",
+    "publish": "npm run build && now --prod"
   },
   "keywords": [
     "graphql",
@@ -24,6 +25,7 @@
     "graphql": "^14.3.1",
     "graphql-import-node": "0.0.4",
     "graphql-playground-middleware-express": "^1.7.12",
+    "graphql-tag-pluck": "^0.8.7",
     "graphql-tools": "^4.0.5",
     "http": "0.0.0",
     "ncp": "^2.0.0",
